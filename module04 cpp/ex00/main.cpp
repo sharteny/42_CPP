@@ -6,22 +6,24 @@
 
 int main()
 {
+    std::cout << "===== ANIMALS =====" << std::endl;
+
     const Animal* meta = new Animal();
-    const Animal* dog = new Dog();
-    const Animal* cat = new Cat();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
 
-    std::cout << dog->getType() << std::endl;
-    std::cout << cat->getType() << std::endl;
+    std::cout << j->getType() << std::endl;
+    std::cout << i->getType() << std::endl;
 
-    dog->makeSound();
-    cat->makeSound();
+    i->makeSound();
+    j->makeSound();
     meta->makeSound();
 
     delete meta;
-    delete dog;
-    delete cat;
+    delete j;
+    delete i;
 
-    std::cout << "\nWrong animals:\n" << std::endl;
+    std::cout << "\n===== WRONG ANIMALS =====" << std::endl;
 
     const WrongAnimal* wrong = new WrongCat();
 

@@ -5,9 +5,16 @@
 int main()
 {
     ScavTrap a("Guardian");
+    ScavTrap b("Enemy");
 
-    a.attack("enemy");
+    a.attack("Enemy");
+    a.guardGate();
 
+    b.attack("Hero");
+    a.takeDamage(15);
+
+    a.attack("Enemy");
+    a.beRepaired(10);
     a.guardGate();
 
     return 0;
